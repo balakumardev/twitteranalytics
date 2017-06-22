@@ -35,6 +35,10 @@ public class TweetsService {
         return userTweetList;
     }
 	
+	void deleteAll() {
+		tweets.clear();
+	}
+	
 	Tweet getTweetById(int id) {
 		Tweet resTweet = null;
 		for(Tweet t: tweets) {
