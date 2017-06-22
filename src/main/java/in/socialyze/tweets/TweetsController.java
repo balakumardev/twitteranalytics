@@ -22,7 +22,7 @@ public class TweetsController {
 
 	@CrossOrigin("http://twitteranalytics.ga")
     @RequestMapping(method=RequestMethod.DELETE, value="/tweets/delete")
-    public void getAllTweets() {
+    public void deleteAll() {
         tweetRepos.deleteAll();
     }
 	
