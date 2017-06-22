@@ -14,31 +14,31 @@ public class TweetsController {
     @Autowired
     TweetsService tweetRepos;
 
-    @CrossOrigin("http://twitteranalytics.ga")
+    @CrossOrigin("https://twitteranalytics.ga")
     @RequestMapping("/tweets")
     public List<Tweet> getAllTweets() {
         return tweetRepos.getAllTweets();
     }
 
-	@CrossOrigin("http://twitteranalytics.ga")
+	@CrossOrigin("https://twitteranalytics.ga")
     @RequestMapping(method=RequestMethod.DELETE, value="/tweets/delete")
     public void deleteAll() {
         tweetRepos.deleteAll();
     }
 	
-	@CrossOrigin("http://twitteranalytics.ga")
+	@CrossOrigin("https://twitteranalytics.ga")
     @RequestMapping("/tweets/{id}")
     public Tweet getTweetById(@PathVariable("id") int id) {
         return tweetRepos.getTweetById(id);
     }
 
-    @CrossOrigin("http://twitteranalytics.ga")
+    @CrossOrigin("https://twitteranalytics.ga")
     @RequestMapping("/tweets/user/{user}")
     public List<Tweet> getTweetsByUser(@PathVariable("user") String user) {
         return tweetRepos.getTweetsByUser(user);
     }
 
-    @CrossOrigin("http://twitteranalytics.ga")
+    @CrossOrigin("https://twitteranalytics.ga")
     @RequestMapping(method=RequestMethod.POST, value="/tweets/add")
     public boolean addTweet(@RequestBody Tweet tweet) {
         return tweetRepos.addTweet(tweet);
